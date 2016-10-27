@@ -1,0 +1,17 @@
+# RemoveDuplicates
+Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.  Do not allocate extra space for another array, you must do this in place with constant memory.
+ 
+ 
+ Function:
+ int removeDuplicates(vector<int>& nums) {
+        int cnt=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            if(i==0||nums[i]!=nums[i-1])
+            {
+                nums[cnt++]=nums[i];
+            }
+        }
+        return cnt;
+    }
+    give a sorted array:{1,1,2},you will return 2,the array should include 1,2;
